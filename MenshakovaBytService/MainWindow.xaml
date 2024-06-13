@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MenshakovaBytService"
         mc:Ignorable="d"
-        Title="БытСервис: Учет заявок на ремонт бытовой техники." Height="450" Width="800">
+        Title="БытСервис: Учет заявок на ремонт бытовой техники." Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="667*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="373*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1"
+                   Text="{Binding ElementName=MainFrame, Path=Content.Title}"
+                   FontSize="35">
+        </TextBlock>
+        <Frame x:Name="MainFrame"
+               Grid.Column="1"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden">
+            
+        </Frame>
     </Grid>
 </Window>

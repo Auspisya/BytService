@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MenshakovaBytService.Classes;
+using MenshakovaBytService.Pages.AuthPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,8 @@ namespace MenshakovaBytService
         public MainWindow()
         {
             InitializeComponent();
+            Navigation.frameNav = MainFrame;
+            MainFrame.Navigate(new AuthorizationPage());
         }
     }
 }
