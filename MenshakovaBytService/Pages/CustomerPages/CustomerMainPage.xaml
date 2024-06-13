@@ -6,9 +6,29 @@
       xmlns:local="clr-namespace:MenshakovaBytService.Pages.CustomerPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CustomerMainPage">
+      Title="Профиль пользователя">
 
     <Grid>
-        
+        <StackPanel>
+            <Button HorizontalAlignment="Right"
+                    Width="100"
+                    Height="25"
+                    Content="Выйти"
+                    Margin="5"
+                    Name="BtnExit"
+                    Click="BtnExit_Click"/>
+            <TextBlock Name="TxbUserName"
+                       Text="Name"
+                       FontSize="20"
+                       Margin="5"/>
+            <TextBlock Name="TxbUserType"
+                       Text="Name"
+                       FontSize="18"
+                       Margin="5"/>
+            <TextBlock Name="TxbPhoneNumber"
+                       Text="Name"
+                       FontSize="18"
+                       Margin="5"/>
+        </StackPanel>
     </Grid>
 </Page>

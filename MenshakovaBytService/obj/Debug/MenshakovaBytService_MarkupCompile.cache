@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\App.xaml
-3-674761113
+6-1693201531
 2-1223955081
-231967931413
+28-1478925715
 18-657793835
-MainWindow.xaml;Pages\AuthPages\AuthorizationPage.xaml;Pages\CustomerPages\CustomerMainPage.xaml;
+MainWindow.xaml;Pages\AuthPages\AuthorizationPage.xaml;Pages\CustomerPages\CustomerAddRequestPage.xaml;Pages\CustomerPages\CustomerMainPage.xaml;Pages\CustomerPages\CustomerMenuPage.xaml;Pages\CustomerPages\CustomerRequestsPage.xaml;
 
 False
 

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MenshakovaBytService"
         mc:Ignorable="d"
-        Title="БытСервис: Учет заявок на ремонт бытовой техники." Height="450" Width="800"
+        Title="БытСервис: Учет заявок на ремонт бытовой техники." Height="450" Width="800" MinHeight="450" MinWidth="800"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="61*"/>
+            <RowDefinition Height="130*"/>
             <RowDefinition Height="373*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="1"
@@ -22,9 +22,9 @@
         </TextBlock>
         <Frame x:Name="MainFrame"
                Grid.Column="1"
-               Grid.Row="1"
-               NavigationUIVisibility="Hidden">
-            
-        </Frame>
+               NavigationUIVisibility="Hidden" Margin="0,61,0,0" Grid.RowSpan="2"/>
+        <Frame x:Name="MenuFrame"
+               Grid.Column="0"
+               NavigationUIVisibility="Hidden" Margin="0,61,0,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>

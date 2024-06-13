@@ -25,3 +25,9 @@ C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\
 C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\MenshakovaBytService.pdb
 C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerMainPage.g.cs
 C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerMainPage.baml
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerMenuPage.g.cs
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerMenuPage.baml
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerAddRequestPage.g.cs
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerRequestsPage.g.cs
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerAddRequestPage.baml
+C:\Users\mensh\source\repos\MenshakovaBytService\MenshakovaBytService\obj\Debug\Pages\CustomerPages\CustomerRequestsPage.baml

@@ -1,5 +1,4 @@
 ﻿using MenshakovaBytService.Classes;
-using MenshakovaBytService.Pages.AuthPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,19 +14,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MenshakovaBytService
+namespace MenshakovaBytService.Pages.CustomerPages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CustomerRequestsPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerRequestsPage : Page
     {
-        public MainWindow()
+        public CustomerRequestsPage()
         {
             InitializeComponent();
-            Navigation.frameNav = MainFrame;
-            MenuNavigation.frameNav = MenuFrame;
-            MainFrame.Navigate(new AuthorizationPage());
+            DGRequests.ItemsSource = null;
+            DGRequests.ItemsSource = DBConnection.DBConnect.Request.Where(r => r.ClientId == GlobalUser.User.Id).ToList();
         }
     }
 }

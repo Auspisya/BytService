@@ -69,6 +69,7 @@ namespace MenshakovaBytService.Pages.AuthPages
                 case 4:
                     MessageBox.Show("Авторизация выполнена успешно!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                     Navigation.frameNav.Navigate(new CustomerMainPage(user));
+                    MenuNavigation.frameNav.Navigate(new CustomerMenuPage());
                     break;
             }
         }

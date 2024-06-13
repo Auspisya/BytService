@@ -1,4 +1,6 @@
-﻿using MenshakovaBytService.Models;
+﻿using MenshakovaBytService.Classes;
+using MenshakovaBytService.Models;
+using MenshakovaBytService.Pages.AuthPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +26,15 @@ namespace MenshakovaBytService.Pages.CustomerPages
         public CustomerMainPage(User user)
         {
             InitializeComponent();
+            TxbUserName.Text = "Добро пожаловать, " + user.FullName + "!";
+            TxbPhoneNumber.Text = "Ваш номер телефона: " + user.PhoneNumber + ".";
+            TxbUserType.Text = "Вы зашли под ролью: " + user.UserType.Name + ".";
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.frameNav.Navigate(new AuthorizationPage());
+            MenuNavigation.frameNav.Navigate(new Page());
         }
     }
 }
