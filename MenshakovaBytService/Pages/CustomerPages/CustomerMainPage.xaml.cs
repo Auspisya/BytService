@@ -23,12 +23,12 @@ namespace MenshakovaBytService.Pages.CustomerPages
     /// </summary>
     public partial class CustomerMainPage : Page
     {
-        public CustomerMainPage(User user)
+        public CustomerMainPage()
         {
             InitializeComponent();
-            TxbUserName.Text = "Добро пожаловать, " + user.FullName + "!";
-            TxbPhoneNumber.Text = "Ваш номер телефона: " + user.PhoneNumber + ".";
-            TxbUserType.Text = "Вы зашли под ролью: " + user.UserType.Name + ".";
+            TxbUserName.Text = "Добро пожаловать, " + GlobalUser.User.FullName + "!";
+            TxbPhoneNumber.Text = "Ваш номер телефона: " + GlobalUser.User.PhoneNumber + ".";
+            TxbUserType.Text = "Вы зашли под ролью: " + GlobalUser.User.UserType.Name + ".";
         }
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)

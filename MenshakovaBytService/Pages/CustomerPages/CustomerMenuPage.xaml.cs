@@ -22,7 +22,6 @@ namespace MenshakovaBytService.Pages.CustomerPages
     /// </summary>
     public partial class CustomerMenuPage : Page
     {
-        private User user1;
         public CustomerMenuPage()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace MenshakovaBytService.Pages.CustomerPages
 
         private void BtnNavigateToProfilePage_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.frameNav.Navigate(new CustomerMainPage(GlobalUser.User));
+            Navigation.frameNav.Navigate(new CustomerMainPage());
         }
 
         private void BtnNavigateToAddRequestPage_Click(object sender, RoutedEventArgs e)

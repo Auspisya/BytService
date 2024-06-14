@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace MenshakovaBytService.Classes
 {
-    internal class Navigation
+    public class Navigation
     {
         public static Frame frameNav { get; set; }
     }

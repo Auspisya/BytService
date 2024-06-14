@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MenshakovaBytService.Classes
 {
-    internal class GlobalUser
+    public class GlobalUser
     {
         public static User User { get; set; }
     }

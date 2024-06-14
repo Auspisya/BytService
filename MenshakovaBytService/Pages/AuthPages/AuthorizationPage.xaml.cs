@@ -1,4 +1,5 @@
 ﻿using MenshakovaBytService.Classes;
+using MenshakovaBytService.Controllers;
 using MenshakovaBytService.Models;
 using MenshakovaBytService.Pages.CustomerPages;
 using System;
@@ -23,54 +24,43 @@ namespace MenshakovaBytService.Pages.AuthPages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
+        private AuthorizationPageController _authorizationPageController;
         public AuthorizationPage()
         {
             InitializeComponent();
+            _authorizationPageController = new AuthorizationPageController();
         }
 
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
-            string login = TxbLogin.Text;
-            string password = PsbPassword.Password;
-
-            if (login == "")
+            try
             {
-                MessageBox.Show("Пожалуйста, введите логин!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
+                string login = TxbLogin.Text;
+                string password = PsbPassword.Password;
+
+                GlobalUser.User = _authorizationPageController.Authorization(login, password);
+
+                switch (GlobalUser.User.UserType.Id)
+                {
+                    case 1:
+                        //Navigation.frameNav.Navigate(new Page());
+                        break;
+                    case 2:
+                        //Navigation.frameNav.Navigate(new Page());
+                        break;
+                    case 3:
+                        //Navigation.frameNav.Navigate(new Page());
+                        break;
+                    case 4:
+                        MessageBox.Show("Авторизация выполнена успешно!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                        Navigation.frameNav.Navigate(new CustomerMainPage());
+                        MenuNavigation.frameNav.Navigate(new CustomerMenuPage());
+                        break;
+                }
             }
-
-            if (password == "")
+            catch (Exception ex)
             {
-                MessageBox.Show("Пожалуйста, введите пароль!", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            User user = DBConnection.DBConnect.User.FirstOrDefault( u => u.Login == login && u.Password == password);
-
-            if (user == null)
-            {
-                MessageBox.Show("Введены неверные логин или пароль! Повторите попытку.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            GlobalUser.User = user;
-
-            switch (user.UserType.Id)
-            {
-                case 1:
-                    //Navigation.frameNav.Navigate(new Page());
-                    break;
-                case 2:
-                    //Navigation.frameNav.Navigate(new Page());
-                    break;
-                case 3:
-                    //Navigation.frameNav.Navigate(new Page());
-                    break;
-                case 4:
-                    MessageBox.Show("Авторизация выполнена успешно!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Navigation.frameNav.Navigate(new CustomerMainPage(user));
-                    MenuNavigation.frameNav.Navigate(new CustomerMenuPage());
-                    break;
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
